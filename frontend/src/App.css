@@ -1,0 +1,141 @@
+/* 🌌 Futuristic background */
+body {
+  font-family: "Poppins", sans-serif;
+  background: radial-gradient(circle at top left, #1e3c72, #2a5298, #000428);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  color: #e0e0e0;
+}
+
+/* 🧊 Glass card container */
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 40px 50px;
+  width: 440px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: floatIn 1s ease-out;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ✨ Neon edge effect */
+.container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 2px;
+  background: linear-gradient(135deg, #00ffcc, #0072ff);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* 💳 Title */
+h1 {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffcc, 0 0 20px #0072ff;
+}
+
+/* 🧾 Form labels */
+label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #b0bec5;
+  margin-bottom: 6px;
+  display: block;
+  text-align: left;
+}
+
+/* 🧠 Inputs with floating glow */
+input, select {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 20px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 0.95rem;
+  transition: 0.3s ease;
+  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+input:focus, select:focus {
+  box-shadow: 0 0 10px #00ffcc;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* 🚀 Predict button */
+button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #00ffcc, #0072ff);
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.3);
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 255, 204, 0.6);
+  background: linear-gradient(135deg, #00ffaa, #0088ff);
+}
+
+/* 📊 Prediction result */
+.result {
+  margin-top: 30px;
+  background: rgba(0, 255, 204, 0.1);
+  border-radius: 12px;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 255, 204, 0.2);
+  animation: fadeIn 0.8s ease;
+}
+
+.result p {
+  font-size: 1.1rem;
+  margin: 5px 0;
+  color: #e0f7fa;
+}
+
+/* 🌠 Animations */
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
